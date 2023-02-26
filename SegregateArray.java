@@ -1,24 +1,25 @@
 package com.nagarro.interview.practice;
-import java.io.*;
 public class SegregateArray {
+	static int count = 0;
+	static int i,number;
 	static void ArraySegregation(int array[], int number) {
-		int count = 0;
-		for(int i =0; i<number;i++) {
+		//int count = 0;
+		for(i =0; i<number;i++) {
 			if(array[i] == 0) {
 				count++;
 			}
 		}
-		for(int i = 0 ; i<count; i++) {
+		for(i = 0 ; i<count; i++) {
 			array[i] = 0;
 		}
-		for (int i = count; i <number; i++) {
+		for (i = count; i <number; i++) {
             array[i] = 1;
 	     }
 	}
-		 static void print(int array[], int n)
+		 static void print(int array[], int number)
 		    {
 		        System.out.print("Array after segregation is ");
-		        for (int i = 0; i < n; i++)
+		        for (i = 0; i < number; i++)
 		            System.out.print(array[i] + " ");    
 		    }
 		public static void main(String[] args) {
